@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "start": "webpack-dev-server",
-    "build-dev": "webpack",
-    "build": "webpack -p",
+    "start": "webpack-dev-server --config ./config/webpack.config.dev.js",
+    "build-dev": "webpack --config ./config/webpack.config.dev.js",
+    "build": "webpack -p --config ./config/webpack.config.prod.js",
     "http-server": "http-server --silent -c-1"
   },
   "babel": {
@@ -20,7 +20,8 @@
     "babel-preset-react": "^6.23.0",
     "http-server": "0.9.0",
     "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.1"
+    "webpack-dev-server": "^2.4.1",
+    "webpack-merge": "^3.0.0"
   },
   "dependencies": {
     "classnames": "2.1.5",
