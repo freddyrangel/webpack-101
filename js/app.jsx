@@ -3,7 +3,6 @@
 /*jshint trailing:false */
 /*jshint newcap:false */
 /*global React, Router*/
-var app = app || {};
 
 (function () {
 	'use strict';
