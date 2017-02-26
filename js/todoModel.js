@@ -2,7 +2,7 @@
 /*jshint white:false */
 /*jshint trailing:false */
 /*jshint newcap:false */
-var app = app || {};
+var app = window.app || {};
 
 (function () {
 	'use strict';
@@ -84,4 +84,5 @@ var app = app || {};
 		this.inform();
 	};
 
+  window.app = app;
 })();

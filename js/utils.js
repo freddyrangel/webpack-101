@@ -1,4 +1,4 @@
-var app = app || {};
+var app = window.app || {};
 
 (function () {
 	'use strict';
@@ -47,4 +47,6 @@ var app = app || {};
 			return newObj;
 		}
 	};
+
+  window.app = app;
 })();

@@ -3,7 +3,7 @@
 /*jshint trailing:false */
 /*jshint newcap:false */
 /*global React */
-var app = app || {};
+var app = window.app || {};
 
 (function () {
 	'use strict';
@@ -59,4 +59,6 @@ var app = app || {};
 			);
 		}
 	});
+
+  window.app = app;
 })();
