@@ -1,23 +1,18 @@
-require('todomvc-common/base.js');
-require('./utils.js');
-require('./todoModel.js');
-require('./todoItem.jsx');
-require('./footer.jsx');
-
+import 'todomvc-common/base.js';
 import { Router } from 'director/build/director.js'
+import TodoModel  from './todoModel.js';
+import TodoItem   from './todoItem.jsx';
+import TodoFooter from './footer.jsx';
 
-app.ALL_TODOS = 'all';
-app.ACTIVE_TODOS = 'active';
-app.COMPLETED_TODOS = 'completed';
-var TodoFooter = app.TodoFooter;
-var TodoItem = app.TodoItem;
+const ALL_TODOS       = 'all';
+const ACTIVE_TODOS    = 'active';
+const COMPLETED_TODOS = 'completed';
+const ENTER_KEY       = 13;
 
-var ENTER_KEY = 13;
-
-var TodoApp = React.createClass({
+const TodoApp = React.createClass({
   getInitialState: function () {
     return {
-      nowShowing: app.ALL_TODOS,
+      nowShowing: ALL_TODOS,
       editing: null,
       newTodo: ''
     };
@@ -26,9 +21,9 @@ var TodoApp = React.createClass({
   componentDidMount: function () {
     var setState = this.setState;
     var router = Router({
-      '/': setState.bind(this, {nowShowing: app.ALL_TODOS}),
-      '/active': setState.bind(this, {nowShowing: app.ACTIVE_TODOS}),
-      '/completed': setState.bind(this, {nowShowing: app.COMPLETED_TODOS})
+      '/': setState.bind(this, {nowShowing: ALL_TODOS}),
+      '/active': setState.bind(this, {nowShowing: ACTIVE_TODOS}),
+      '/completed': setState.bind(this, {nowShowing: COMPLETED_TODOS})
     });
     router.init('/');
   },
@@ -89,9 +84,9 @@ var TodoApp = React.createClass({
 
     var shownTodos = todos.filter(function (todo) {
       switch (this.state.nowShowing) {
-      case app.ACTIVE_TODOS:
+      case ACTIVE_TODOS:
         return !todo.completed;
-      case app.COMPLETED_TODOS:
+      case COMPLETED_TODOS:
         return todo.completed;
       default:
         return true;
@@ -165,7 +160,7 @@ var TodoApp = React.createClass({
   }
 });
 
-var model = new app.TodoModel('react-todos');
+var model = new TodoModel('react-todos');
 
 function render() {
   React.render(
