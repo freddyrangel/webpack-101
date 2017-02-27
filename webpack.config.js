@@ -7,6 +7,7 @@ module.exports = {
   output: {
     path: targetDirecory,
     filename: 'bundle.js'
+    publicPath: '/build/'
   },
   module: {
     rules: [

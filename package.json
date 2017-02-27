@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "http-server --silent -c-1",
+    "start": "webpack-dev-server",
+    "http-server": "http-server --silent -c-1",
     "build": "webpack"
   },
   "babel": {
