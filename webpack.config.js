@@ -18,5 +18,6 @@ module.exports = {
       }
     ]
   },
-  entry: './app.jsx'
+  entry: './app.jsx',
+  devtool: 'source-map'
 };

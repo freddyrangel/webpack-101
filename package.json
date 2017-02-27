@@ -2,7 +2,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "http-server": "http-server --silent -c-1",
-    "build": "webpack"
+    "build": "webpack -p"
   },
   "babel": {
     "env": {
