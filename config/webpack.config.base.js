@@ -1,11 +1,9 @@
-const { resolve }     = require('path');
-const sourceDirectory = resolve('js')
-const targetDirecory  = resolve('build')
+const path = require('path');
 
 module.exports = {
-  context: sourceDirectory,
+  context: path.resolve('js'),
   output: {
-    path: targetDirecory,
+    path: path.resolve('build'),
     filename: 'bundle.js',
     publicPath: '/build/'
   },
@@ -13,7 +11,7 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        include: [sourceDirectory],
+        include: [path.resolve('js')],
         use: [{ loader: 'babel-loader' }]
       }
     ]
