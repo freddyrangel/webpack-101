@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --config ./config/webpack.config.dev.js",
     "http-server": "http-server --silent -c-1",
-    "build": "webpack -p"
+    "build": "webpack -p --config ./config/webpack.config.prod.js"
   },
   "babel": {
     "env": {
