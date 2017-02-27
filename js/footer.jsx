@@ -1,4 +1,4 @@
-import Utils from './utils';
+import * as Utils from './utils';
 
 const ALL_TODOS       = 'all';
 const ACTIVE_TODOS    = 'active';
