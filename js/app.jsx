@@ -1,4 +1,7 @@
 import 'todomvc-common/base.js';
+import 'todomvc-common/base.css';
+import 'todomvc-app-css/index.css';
+
 import { Router } from 'director/build/director.js'
 import TodoModel  from './todoModel.js';
 import TodoItem   from './todoItem.jsx';

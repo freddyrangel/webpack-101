@@ -14,6 +14,14 @@ module.exports = {
         test: /\.jsx?$/,
         include: [path.resolve('js')],
         use: [{ loader: 'babel-loader' }]
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'resolve-url-loader'
+        ]
       }
     ]
   },
