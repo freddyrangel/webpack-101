@@ -1,37 +1,28 @@
-# React TodoMVC Example
+# Webpack 101
 
-> React is a JavaScript library for creating user interfaces. Its core principles are declarative code, efficiency, and flexibility. Simply specify what your component looks like and React will keep it up-to-date when the underlying data changes.
+## Requirements:
 
-> _[React - facebook.github.io/react](http://facebook.github.io/react)_
+* [Git](https://git-scm.com/downloads)
+* [Node.js](https://nodejs.org/en/)
+    * NVM is the easiest way to manage Node. [Its setup instructions here](https://github.com/creationix/nvm#installation). Then run `nvm install node && nvm alias default node`, which installs the latest version of Node.js and sets up your terminal so you can run it by typing `node`. With nvm you can install multiple versions of Node.js and easily switch between them.
+    * New to [npm](https://docs.npmjs.com/)?
 
+## Instructions
 
-## Learning React
+* Make sure you have satisfied all requirements listed above.
+* Clone this repository.
+* From the root of this project, run `npm install` to install all the required dependencies.
+* To confirm you have installed everything correctly, run `npm start` and navigate to `localhost:8080` in your browser. You should see a Todo App
 
-The [React getting started documentation](http://facebook.github.io/react/docs/getting-started.html) is a great way to get started.
+## Module Cheatsheet
 
-Here are some links you may find helpful:
-
-* [Documentation](http://facebook.github.io/react/docs/getting-started.html)
-* [API Reference](http://facebook.github.io/react/docs/reference.html)
-* [Blog](http://facebook.github.io/react/blog/)
-* [React on GitHub](https://github.com/facebook/react)
-* [Support](http://facebook.github.io/react/support.html)
-
-Articles and guides from the community:
-
-* [How is Facebook's React JavaScript library](http://www.quora.com/React-JS-Library/How-is-Facebooks-React-JavaScript-library)
-* [React: Under the hood](http://www.quora.com/Pete-Hunt/Posts/React-Under-the-Hood)
-
-Get help from other React users:
-
-* [React on StackOverflow](http://stackoverflow.com/questions/tagged/reactjs)
-* [Discussion Forum](https://discuss.reactjs.org/)
-
-_If you have other helpful links to share, or find any of the links above no longer work, please [let us know](https://github.com/tastejs/todomvc/issues)._
-
-
-## Running
-
-The app is built with [JSX](http://facebook.github.io/react/docs/jsx-in-depth.html) and compiled at runtime for a lighter and more fun code reading experience. As stated in the link, JSX is not mandatory.
-
-To run the app, spin up an HTTP server (e.g. `python -m SimpleHTTPServer`) and visit http://localhost/.../myexample/.
+* [00-initialize-webpack](https://github.com/freddyrangel/webpack-101/compare/master...00-initialize-webpack?expand=1)
+* [01-webpack-dev-server](https://github.com/freddyrangel/webpack-101/compare/00-initialize-webpack...01-webpack-dev-server?expand=1)
+* [02-sourcemaps](https://github.com/freddyrangel/webpack-101/compare/01-webpack-dev-server...02-sourcemaps?expand=1)
+* [03-env-configs](https://github.com/freddyrangel/webpack-101/compare/02-sourcemaps...03-env-configs?expand=1)
+* [04-bundling-scripts](https://github.com/freddyrangel/webpack-101/compare/03-env-configs...04-bundling-scripts?expand=1)
+* [05-es6-modules](https://github.com/freddyrangel/webpack-101/compare/04-bundling-scripts...05-es6-modules?expand=1)
+* [06-modularizing-css](https://github.com/freddyrangel/webpack-101/compare/05-es6-modules...06-modularizing-css?expand=1)
+* [07-testing](https://github.com/freddyrangel/webpack-101/compare/06-modularizing-css...07-testing?expand=1)
+* [08-tree-shaking](https://github.com/freddyrangel/webpack-101/compare/07-testing...08-tree-shaking?expand=1)
+* [09-vendor-bundle-and-caching](https://github.com/freddyrangel/webpack-101/compare/08-tree-shaking...09-vendor-bundle-and-caching?expand=1)
