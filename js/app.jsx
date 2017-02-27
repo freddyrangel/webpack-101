@@ -1,3 +1,11 @@
+require('todomvc-common/base.js');
+require('./utils.js');
+require('./todoModel.js');
+require('./todoItem.jsx');
+require('./footer.jsx');
+
+import { Router } from 'director/build/director.js'
+
 app.ALL_TODOS = 'all';
 app.ACTIVE_TODOS = 'active';
 app.COMPLETED_TODOS = 'completed';
