@@ -6,7 +6,7 @@ module.exports = {
   context: sourceDirectory,
   output: {
     path: targetDirecory,
-    filename: 'bundle.js'
+    filename: 'bundle.js',
     publicPath: '/build/'
   },
   module: {
