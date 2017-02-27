@@ -1,4 +1,4 @@
-import Utils from './utils.js';
+import Utils from './utils';
 
 // Generic "model" object. You can use whatever
 // framework you want. For this application it
