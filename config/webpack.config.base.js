@@ -1,4 +1,5 @@
-const path = require('path');
+const path    = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   context: path.resolve('js'),
@@ -16,5 +17,11 @@ module.exports = {
       }
     ]
   },
-  entry: './app.jsx'
+  entry: './app.jsx',
+  plugins: [
+    new webpack.ProvidePlugin({
+      React: 'react',
+      classNames: 'classnames'
+    })
+  ]
 };

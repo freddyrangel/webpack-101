@@ -1,3 +1,9 @@
+import 'todomvc-common/base.js';
+import './utils.js';
+import './todoModel.js';
+import './todoItem.jsx';
+import './footer.jsx';
+
 var app = window.app || {};
 
 app.ALL_TODOS = 'all';
