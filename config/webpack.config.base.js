@@ -1,12 +1,12 @@
-const path = require('path');
+const path    = require('path');
 const webpack = require('webpack');
+const htmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   context: path.resolve('js'),
   output: {
     path: path.resolve('build'),
-    filename: 'bundle.js',
-    publicPath: '/build/'
+    filename: '[name].[chunkhash].js',
   },
   module: {
     rules: [
@@ -25,11 +25,25 @@ module.exports = {
       }
     ]
   },
-  entry: './app.jsx',
+  entry: {
+    app: './app.jsx',
+    vendor: [
+      'todomvc-common/base.js',
+      'todomvc-common/base.css',
+      'todomvc-app-css/index.css',
+      'react',
+      'director/build/director.js',
+      'classnames'
+    ]
+  },
   plugins: [
     new webpack.ProvidePlugin({
       React: 'react',
       classNames: 'classnames'
+    }),
+    new htmlWebpackPlugin({
+      template: './index.html',
+      inject: 'body'
     })
   ]
 };
