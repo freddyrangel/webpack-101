@@ -169,4 +169,5 @@ function render() {
 }
 
 model.subscribe(render);
+
 render();
