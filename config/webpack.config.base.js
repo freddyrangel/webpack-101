@@ -1,7 +1,8 @@
-const webpack         = require('webpack');
-const { resolve }     = require('path');
-const sourceDirectory = resolve('js');
-const targetDirecory  = resolve('build');
+const webpack                     = require('webpack');
+const { resolve }                 = require('path');
+const sourceDirectory             = resolve('js');
+const targetDirecory              = resolve('build');
+const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin');
 
 module.exports = {
   context: sourceDirectory,
@@ -19,11 +20,21 @@ module.exports = {
       }
     ]
   },
-  entry: './app.jsx',
+  entry: './entry.jsx',
   plugins: [
     new webpack.ProvidePlugin({
       React: 'react',
       classNames: 'classnames'
     })
-  ]
+  ],
+  resolve: {
+    modules: [sourceDirectory, 'node_modules'],
+    extensions: ['.js', '.jsx', '*'],
+    plugins: [
+      new DirectoryNamedWebpackPlugin({
+        honorIndex: true,
+        include: [sourceDirectory],
+      })
+    ]
+  }
 };

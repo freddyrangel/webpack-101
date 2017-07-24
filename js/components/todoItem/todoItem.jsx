@@ -1,9 +1,6 @@
-var app = window.app || {};
+import { ESCAPE_KEY, ENTER_KEY } from 'constant-variables';
 
-var ESCAPE_KEY = 27;
-var ENTER_KEY = 13;
-
-app.TodoItem = React.createClass({
+const TodoItem = React.createClass({
   handleSubmit: function (event) {
     var val = this.state.editText.trim();
     if (val) {
@@ -97,4 +94,5 @@ app.TodoItem = React.createClass({
     );
   }
 });
-window.app = app;
+
+export default TodoItem;

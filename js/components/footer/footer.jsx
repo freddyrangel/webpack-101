@@ -1,8 +1,9 @@
-var app = window.app || {};
+import Utils                                        from 'utils';
+import { ALL_TODOS, ACTIVE_TODOS, COMPLETED_TODOS } from 'constant-variables';
 
-app.TodoFooter = React.createClass({
+const TodoFooter = React.createClass({
   render: function () {
-    var activeTodoWord = app.Utils.pluralize(this.props.count, 'item');
+    var activeTodoWord = Utils.pluralize(this.props.count, 'item');
     var clearButton = null;
 
     if (this.props.completedCount > 0) {
@@ -25,7 +26,7 @@ app.TodoFooter = React.createClass({
           <li>
             <a
               href="#/"
-              className={classNames({selected: nowShowing === app.ALL_TODOS})}>
+              className={classNames({selected: nowShowing === ALL_TODOS})}>
                 All
             </a>
           </li>
@@ -33,7 +34,7 @@ app.TodoFooter = React.createClass({
           <li>
             <a
               href="#/active"
-              className={classNames({selected: nowShowing === app.ACTIVE_TODOS})}>
+              className={classNames({selected: nowShowing === ACTIVE_TODOS})}>
                 Active
             </a>
           </li>
@@ -41,7 +42,7 @@ app.TodoFooter = React.createClass({
           <li>
             <a
               href="#/completed"
-              className={classNames({selected: nowShowing === app.COMPLETED_TODOS})}>
+              className={classNames({selected: nowShowing === COMPLETED_TODOS})}>
                 Completed
             </a>
           </li>
@@ -52,4 +53,4 @@ app.TodoFooter = React.createClass({
   }
 });
 
-window.app = app;
+export default TodoFooter;

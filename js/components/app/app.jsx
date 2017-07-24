@@ -1,22 +1,14 @@
-import './utils.js';
-import './todoModel.js';
-import './todoItem.jsx';
-import './footer.jsx';
+import { Router } from 'director/build/director.js'
+import TodoItem   from 'components/todoItem';
+import TodoFooter from 'components/footer';
+import {
+  ALL_TODOS, ACTIVE_TODOS, COMPLETED_TODOS, ENTER_KEY
+} from 'constant-variables';
 
-var app = window.app || {};
-
-app.ALL_TODOS = 'all';
-app.ACTIVE_TODOS = 'active';
-app.COMPLETED_TODOS = 'completed';
-var TodoFooter = app.TodoFooter;
-var TodoItem = app.TodoItem;
-
-var ENTER_KEY = 13;
-
-var TodoApp = React.createClass({
+const TodoApp = React.createClass({
   getInitialState: function () {
     return {
-      nowShowing: app.ALL_TODOS,
+      nowShowing: ALL_TODOS,
       editing: null,
       newTodo: ''
     };
@@ -25,9 +17,9 @@ var TodoApp = React.createClass({
   componentDidMount: function () {
     var setState = this.setState;
     var router = Router({
-      '/': setState.bind(this, {nowShowing: app.ALL_TODOS}),
-      '/active': setState.bind(this, {nowShowing: app.ACTIVE_TODOS}),
-      '/completed': setState.bind(this, {nowShowing: app.COMPLETED_TODOS})
+      '/': setState.bind(this, {nowShowing: ALL_TODOS}),
+      '/active': setState.bind(this, {nowShowing: ACTIVE_TODOS}),
+      '/completed': setState.bind(this, {nowShowing: COMPLETED_TODOS})
     });
     router.init('/');
   },
@@ -88,9 +80,9 @@ var TodoApp = React.createClass({
 
     var shownTodos = todos.filter(function (todo) {
       switch (this.state.nowShowing) {
-      case app.ACTIVE_TODOS:
+      case ACTIVE_TODOS:
         return !todo.completed;
-      case app.COMPLETED_TODOS:
+      case COMPLETED_TODOS:
         return todo.completed;
       default:
         return true;
@@ -164,15 +156,4 @@ var TodoApp = React.createClass({
   }
 });
 
-var model = new app.TodoModel('react-todos');
-
-function render() {
-  React.render(
-    <TodoApp model={model}/>,
-    document.getElementsByClassName('todoapp')[0]
-  );
-}
-
-model.subscribe(render);
-
-render();
+export default TodoApp;

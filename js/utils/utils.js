@@ -1,6 +1,4 @@
-var app = window.app || {};
-
-app.Utils = {
+export default {
   uuid: function () {
     /*jshint bitwise:false */
     var i, random;
@@ -44,5 +42,3 @@ app.Utils = {
     return newObj;
   }
 };
-
-window.app = app;
