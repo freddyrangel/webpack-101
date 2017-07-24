@@ -1,4 +1,3 @@
-import 'todomvc-common/base.js';
 import './utils.js';
 import './todoModel.js';
 import './todoItem.jsx';

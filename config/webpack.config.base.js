@@ -1,10 +1,12 @@
-const path    = require('path');
-const webpack = require('webpack');
+const webpack         = require('webpack');
+const { resolve }     = require('path');
+const sourceDirectory = resolve('js');
+const targetDirecory  = resolve('build');
 
 module.exports = {
-  context: path.resolve('js'),
+  context: sourceDirectory,
   output: {
-    path: path.resolve('build'),
+    path: targetDirecory,
     filename: 'bundle.js',
     publicPath: '/build/'
   },
@@ -12,7 +14,7 @@ module.exports = {
     rules: [
       {
         test: /\.jsx?$/,
-        include: [path.resolve('js')],
+        include: [sourceDirectory],
         use: [{ loader: 'babel-loader' }]
       }
     ]
