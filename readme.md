@@ -16,13 +16,13 @@
 
 ## Module Cheatsheet
 
-* [00-initialize-webpack](https://github.com/freddyrangel/webpack-101/compare/master...00-initialize-webpack?expand=1)
-* [01-webpack-dev-server](https://github.com/freddyrangel/webpack-101/compare/00-initialize-webpack...01-webpack-dev-server?expand=1)
-* [02-sourcemaps](https://github.com/freddyrangel/webpack-101/compare/01-webpack-dev-server...02-sourcemaps?expand=1)
-* [03-env-configs](https://github.com/freddyrangel/webpack-101/compare/02-sourcemaps...03-env-configs?expand=1)
-* [04-bundling-scripts](https://github.com/freddyrangel/webpack-101/compare/03-env-configs...04-bundling-scripts?expand=1)
-* [05-es6-modules](https://github.com/freddyrangel/webpack-101/compare/04-bundling-scripts...05-es6-modules?expand=1)
-* [06-modularizing-css](https://github.com/freddyrangel/webpack-101/compare/05-es6-modules...06-modularizing-css?expand=1)
-* [07-testing](https://github.com/freddyrangel/webpack-101/compare/06-modularizing-css...07-testing?expand=1)
-* [08-tree-shaking](https://github.com/freddyrangel/webpack-101/compare/07-testing...08-tree-shaking?expand=1)
-* [09-vendor-bundle-and-caching](https://github.com/freddyrangel/webpack-101/compare/08-tree-shaking...09-vendor-bundle-and-caching?expand=1)
+* [00-initialize-webpack](https://github.com/freddyrangel/webpack-101/compare/master...00-initialize-webpack)
+* [01-webpack-dev-server](https://github.com/freddyrangel/webpack-101/compare/00-initialize-webpack...01-webpack-dev-server)
+* [02-sourcemaps](https://github.com/freddyrangel/webpack-101/compare/01-webpack-dev-server...02-sourcemaps)
+* [03-env-configs](https://github.com/freddyrangel/webpack-101/compare/02-sourcemaps...03-env-configs)
+* [04-bundling-scripts](https://github.com/freddyrangel/webpack-101/compare/03-env-configs...04-bundling-scripts)
+* [05-es6-modules](https://github.com/freddyrangel/webpack-101/compare/04-bundling-scripts...05-es6-modules)
+* [06-modularizing-css](https://github.com/freddyrangel/webpack-101/compare/05-es6-modules...06-modularizing-css)
+* [07-testing](https://github.com/freddyrangel/webpack-101/compare/06-modularizing-css...07-testing)
+* [08-tree-shaking](https://github.com/freddyrangel/webpack-101/compare/07-testing...08-tree-shaking)
+* [09-vendor-bundle-and-caching](https://github.com/freddyrangel/webpack-101/compare/08-tree-shaking...09-vendor-bundle-and-caching)
