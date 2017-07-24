@@ -1,6 +1,48 @@
 {
   "scripts": {
-    "start": "http-server --silent -c-1"
+    "start": "webpack-dev-server --config ./config/webpack.config.dev.js",
+    "http-server": "http-server --silent -c-1",
+    "build": "webpack -p --config ./config/webpack.config.prod.js",
+    "test": "jest"
+  },
+  "babel": {
+    "env": {
+      "development": {
+        "presets": [
+          ["es2015", { "modules": false }],
+          "react"
+        ]
+      },
+      "test": {
+        "presets": [
+          "es2015",
+          "react"
+        ]
+      }
+    }
+  },
+  "jestWebpackResolver": {
+    "webpackConfig": "./config/webpack.config.test.js"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "verbose": true,
+    "testRegex": "-test.+(js|jsx)",
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "<rootDir>/js"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|scss|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/js/test/mocks/noop.js"
+    },
+    "resolver": "jest-webpack-resolver",
+    "setupFiles": ["<rootDir>/js/test/jest.setup.js"]
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
