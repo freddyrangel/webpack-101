@@ -1,4 +1,4 @@
-import Utils                                        from 'utils';
+import * as Utils                                   from 'utils';
 import { ALL_TODOS, ACTIVE_TODOS, COMPLETED_TODOS } from 'constant-variables';
 
 const TodoFooter = React.createClass({

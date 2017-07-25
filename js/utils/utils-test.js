@@ -1,4 +1,4 @@
-import Utils from './utils.js';
+import * as Utils from 'utils';
 
 describe('Utils', function() {
   describe('uuid', function() {
