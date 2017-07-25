@@ -6,11 +6,6 @@ const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin');
 
 module.exports = {
   context: sourceDirectory,
-  output: {
-    path: targetDirecory,
-    filename: 'bundle.js',
-    publicPath: '/build/'
-  },
   module: {
     rules: [
       {
@@ -20,12 +15,22 @@ module.exports = {
       }
     ]
   },
-  entry: './entry.jsx',
+  entry: {
+    app: './entry.jsx',
+    vendor: [
+      'todomvc-common/base.css',
+      'todomvc-app-css/index.css',
+      'react',
+      'director/build/director.js',
+      'classnames'
+    ]
+  },
   plugins: [
     new webpack.ProvidePlugin({
       React: 'react',
       classNames: 'classnames'
-    })
+    }),
+    new webpack.optimize.CommonsChunkPlugin({ names: ['vendor', 'manifest'] }),
   ],
   resolve: {
     modules: [sourceDirectory, 'node_modules'],
