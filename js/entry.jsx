@@ -1,3 +1,5 @@
+import 'todomvc-common/base.css';
+import 'todomvc-app-css/index.css';
 import TodoApp   from 'components/app';
 import TodoModel from 'models/todoModel.js';
 
